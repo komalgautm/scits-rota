@@ -4,8 +4,9 @@ Route::get('clear', function() {
 	return "Cleared!";
  });
 
+ 
 
-Route::match(['get','post'],'/change-design-layout/{design_layout_id}', 'frontEnd\DashboardController@change_layout');
+Route::match(['get','post'],'/change-design-layout/{design_layout_id}',  'frontEnd\DashboardController@change_layout');
                          /*-------Api Routes-------*/
 Route::group(['prefix' => 'api/service'], function () {
     Route::post('/contact-us', 'Api\ContactUsController@add_contact_us');

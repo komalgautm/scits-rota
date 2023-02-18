@@ -84,21 +84,21 @@
                         </div>
                     </div>
                 </a>
-                <!-- <a href="{{ url('/staff-management') }}">
+                <a href="{{ url('/rota') }}">
                     <div class="col-md-6">
                         <div class="profile-nav alt">
                             <section class="panel text-center">
                                 <div class="user-heading alt wdgt-row bg-purple"> <i class="fa fa-group"></i> </div>
                                 <div class="panel-body">
                                     <div class="wdgt-value">
-                                        <h1 class="count">Staff<br>Management</h1>
+                                        <h1 class="count">Rota<br>Management</h1>
                                         <p></p>
                                     </div>
                                 </div>
                             </section>
                         </div>
                     </div>
-                </a> -->
+                </a>
                 <!-- <div class="col-md-6">
                     <div class="profile-nav alt">
                         <a data-target="#PoliProcModal" data-toggle="modal" class="MainNavText" >    <!-- #PoliProcModal --
