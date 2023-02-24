@@ -5,6 +5,46 @@ Route::get('clear', function() {
  });
 
  
+Route::get('/rota-dashboard','Rota\RotaController@index');
+Route::get('/rota','Rota\RotaController@create');
+Route::post('/add-rota-data','Rota\RotaController@store');
+Route::get('/rota-planner','Rota\RotaController@rota_calender_view');
+
+Route::post('/add-shift-data','Rota\RotaController@add_shift_data');
+
+Route::get('/get-all-users','Rota\RotaController@get_all_users');
+Route::post('/assign_rota_users','Rota\RotaController@assign_rota_users');
+Route::post('/update_rota_name','Rota\RotaController@update_rota_name');
+Route::post('/publish_rota_employee','Rota\RotaController@publish_rota_employee');
+Route::post('/unpublish_rota_employee','Rota\RotaController@unpublish_rota_employee');
+
+
+Route::get('/calender','Rota\RotaController@calender_view');
+Route::get('/absence/type={id}','Rota\RotaController@annual_leave_view');
+Route::post('/get-all-users-search','Rota\RotaController@get_all_users_search');
+
+Route::post('/delete_rota_employee','Rota\RotaController@delete_rota_employee');
+Route::get('/edit_rota/{id}','Rota\RotaController@edit_rota');
+Route::post('/publish_unpublish_rota','Rota\RotaController@publish_unpublish_rota');
+
+Route::post('/add-leave','Rota\RotaController@add_leave');
+Route::post('/date_validation_for_user','Rota\RotaController@date_validation_for_user');
+
+
+Route::get('/pending-request','Rota\RotaController@leave_pending');
+Route::get('/get_all_leave','Rota\RotaController@get_all_leave');
+Route::get('/employee','Rota\RotaController@employee_view');
+Route::post('/get_rota_employee','Rota\RotaController@get_rota_employee');
+Route::post('/get_all_shift','Rota\RotaController@get_all_shift');
+Route::post('/edit_shift_data_get','Rota\RotaController@edit_shift_data_get');
+Route::post('/update-shift-data','Rota\RotaController@update_shift_data');
+Route::post('/approve_leave','Rota\RotaController@approve_leave');
+Route::post('/get_leave_record_for_1_week','Rota\RotaController@get_leave_record_for_1_week');
+
+Route::post('/get_record_of_rota','Rota\RotaController@get_record_of_rota');
+Route::get('/get_all_rota_data','Rota\RotaController@get_all_rota_data');
+
+// Route::get('/rota-dashboard','Other\RotasController@my_page');
 
 Route::match(['get','post'],'/change-design-layout/{design_layout_id}',  'frontEnd\DashboardController@change_layout');
                          /*-------Api Routes-------*/
@@ -679,7 +719,7 @@ Route::group(['middleware'=>['checkUserAuth','lock']],function(){
 	Route::get('/system-guide/faq/view/{guide_tag}','frontEnd\SystemGuideController@index');
 	Route::get('/system-guide/category/logged','frontEnd\SystemGuideController@category_logged');
 	Route::get('/system-guide/search/{ques}','frontEnd\SystemGuideController@searched_ques');
-
+  
 	//Routes that does not need permissions - Auth and access
 
 	// Frontend unique SU username

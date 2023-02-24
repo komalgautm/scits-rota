@@ -228,15 +228,12 @@ class User extends Authenticatable
     }
     /*
     Note: User(manager/staff) - set password functionality
-
         1. Super admin will create a new user
             Its password field will be blank initially
-
         2. Then admin click on set password button in admin > users list         
             set security code to a random number
             use this security code to generate set password link
             This link will be sent to the user's email id
-
         3. When user will click on this link, He will be redirected to scits > set password page
             in this page user will type his new password and confirm password, 
             here security code will be in a hidden field 
@@ -245,7 +242,6 @@ class User extends Authenticatable
             set password to entered password
             set security code equal to blank
             save user and redirect to login
-
         5. In login page user needs to 
             input company name
             select home 

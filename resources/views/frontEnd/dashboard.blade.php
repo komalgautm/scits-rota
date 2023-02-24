@@ -84,7 +84,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="{{ url('/rota') }}">
+                <a href="{{ url('/rota-dashboard') }}">
                     <div class="col-md-6">
                         <div class="profile-nav alt">
                             <section class="panel text-center">
